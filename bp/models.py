@@ -1,11 +1,15 @@
 from django.db import models
+from django.urls import reverse
 import uuid
-class student(models.Model):
-    studentcode=  models.IntegerField()
-    dateofsend=   models.DateField(null=True,blank=True)
-    score=        models.IntegerField()
 
-    def get_absolute_url(self):
-        return reverse('studentcodedetail',args=[str(self.id)])
-    def __int__(self):
-        return self.studentcode
+class studentNumber(models.Model):
+    studentcode=  models.IntegerField()
+
+class exercises(models.Model):
+    pass
+
+class Date(models.Model):
+    dateofSend=   models.DateField(null=True,blank=True)
+
+class score(models.Model):
+    scores=       models.IntegerField()

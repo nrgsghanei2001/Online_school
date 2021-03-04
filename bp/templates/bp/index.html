@@ -1,0 +1,18 @@
+{% extends "bp/base_generic.html" %}
+
+{% block content %}
+<h1>Local Site home</h1>
+
+  <p>welcome to <em>Local Site</em>, a basic Django website </p>
+
+<h2>Dynamic content</h2>
+
+  <p>The site has following things to show:</p>
+  <ul>
+    <li><strong>students:</strong> {{students}}</li>
+    <li><strong>date:</strong> {{date}}</li>
+    <li><strong>exercise</strong> {{exercise}}</li>
+    <li><strong>scores</</strong>{{scores}}</li>
+  </ul>
+
+{% endblock %}

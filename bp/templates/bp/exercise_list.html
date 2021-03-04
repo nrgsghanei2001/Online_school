@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>exercises List</h1>
+
+    {% if exercises_list %}
+    <ul>
+
+      {% for exercises in exercises_list %}
+      <li>
+        <a href="{{exercises.get_absolute_url}}"></a>
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>There are bo exercises.</p>
+    {% endif %}
+{% endblock %}
