@@ -1,0 +1,19 @@
+{% extends "bp/base_generic.html" %}
+
+{% block content %}
+    <h1>students List</h1>
+
+    {% if students_list %}
+    <ul>
+
+      {% for students in exercises_list %}
+      <li>
+        <a href="{{studentNumber.get_absolute_url}}"></a>
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>There are bo students.</p>
+    {% endif %}
+{% endblock %}

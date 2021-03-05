@@ -14,16 +14,18 @@ class Index(generic.TemplateView):
         context['scores']=   models.score.objects.all()
         return context
 
-class ExercisesListView(generic.ListView):
+class studentslistView(generic.ListView):
 
-    model=models.exercises
-    template_name='bp/exercises_list.html'
+    model=models.studentNumber
+    template_name='bp/students_list.html'
 
 class exerciseUpload(generic.TemplateView):
 
     template_name='bp/upload.html'
 
+class login(generic.TemplateView):
 
+    template_name='bp/login.html'
 #def index(request):
 #    students=  models.studentNumber.objects.all()
 #    date=      models.Date.objects.all()

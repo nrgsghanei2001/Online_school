@@ -4,6 +4,7 @@ app_name='bp'
 
 urlpatterns = [
     url(r'^$',views.Index.as_view(),name='index'),
-    url(r'^exercises/$',views.ExercisesListView.as_view(),name='exercises'),
-    url(r'^upload/$',views.exerciseUpload.as_view(),name='upload'),
+    url(r'^students/$',views.studentslistView.as_view(),name='students'),
+    url('upload/$',views.exerciseUpload.as_view(),name='upload'),
+    url('login/$',views.login.as_view(),name='login'),
 ]
