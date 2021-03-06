@@ -13,3 +13,10 @@ class Date(models.Model):
 
 class score(models.Model):
     scores=       models.IntegerField()
+
+class Videos(models.Model):
+    caption = models.CharField(max_length=100)
+    Vids=     models.FileField(upload_to='video')
+
+    def __str__(self):
+        return self.caption

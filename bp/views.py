@@ -1,6 +1,12 @@
 from django.shortcuts import render
 from django.views import generic
 from . import models
+from django.http import HttpResponse
+from django.shortcuts import render
+from .forms import CreateVideo
+from .models import Videos
+# Imaginary function to handle an uploaded file.
+
 
 class Index(generic.TemplateView):
 
@@ -26,6 +32,20 @@ class exerciseUpload(generic.TemplateView):
 class login(generic.TemplateView):
 
     template_name='bp/login.html'
+
+def teacherVideos(request):
+    videos=Videos.objects.all()
+    context={'videos':videos}
+    return render(request,'bp/videos_caption.html',context)
+
+def videoUpload(request):
+    forms = CreateVideo.objects.all()
+    if request.method == 'POST':
+        forms = ImageForm(request.POST, request.FILES)
+        forms.save()
+        return HttpResponse('submision was successful')
+    context={'form': form}
+    return render(request, 'bp/teacher_video_upload.html', context)
 #def index(request):
 #    students=  models.studentNumber.objects.all()
 #    date=      models.Date.objects.all()
