@@ -6,4 +6,6 @@ from .models import Videos
 class ExercisesAdmin(admin.ModelAdmin):
     pass
 
-admin.site.register(Videos)
+@admin.register(models.Videos)
+class VideoAdmin(admin.ModelAdmin):
+    pass
