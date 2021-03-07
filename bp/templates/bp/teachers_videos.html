@@ -1,0 +1,21 @@
+<html>
+
+<head>
+<title>teachers_video_uploading</title>
+</head>
+
+<body>
+          <h2>Upload new videos here</h2>
+          <h3><a href="{% url 'home' %}"><<< back page<a></h3>
+          <hr>
+          <br>
+          <h2><a href="{% url 'teachers_videos_upload' %}" >Upload Videos<a></h2>
+          <hr>
+          <br>
+          <p>video_lists:</p>
+          {% for video in videos %}
+              <li><a href="{% url 'teachers_videos_seen' video.id %}" > {{video.name}} </a></li>
+          {% endfor %}
+</body>
+
+</html>

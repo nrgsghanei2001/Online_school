@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>videos</title>
+</head>
+
+<body>
+<h1>VIDEOS_LIST</h1>
+<h2><a href="{% url 'home' %}"><<< back page<a></h2>
+            <video  loop="loop" controls="controls">
+                <source src="{{ video.file.url }}" type="video/mp4">
+            </video>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<html>
+
+<head>
+  <title>students_video_download</title>
+</head>
+
+<body>
+            <h2>Download teachers videos from here</h2>
+            <hr>
+            <h3><a href="{% url 'home' %}"><<< back page<a></h3>
+            <hr>
+            <p>videod_list:</p>
+            {% for video in videos %}
+                <li><a href="{% url 'teachers_videos_seen' video.id %}">{{video.name}}</a></li>
+            {% endfor %}
+</body>
+
+</html>

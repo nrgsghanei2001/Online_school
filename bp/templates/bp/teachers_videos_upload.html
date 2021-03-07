@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>teachersVideoUpload</title>
+</head>
+
+<body>
+    <h2>Upload Here</h2>
+    <h3><a href="{% url 'home' %}"><<< back page<a></h3>
+    <br>
+    <form action="" method="POST" enctype="multipart/form-data">
+       {% csrf_token %}
+       {{form}}
+       <input type ="submit" value="submit">
+    </form>
+</body>
+
+</html>

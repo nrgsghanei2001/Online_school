@@ -1,11 +1,7 @@
 from django.contrib import admin
 from . import models
-from .models import Videos
 
-@admin.register(models.exercises)
-class ExercisesAdmin(admin.ModelAdmin):
-    pass
-
-@admin.register(models.Videos)
-class VideoAdmin(admin.ModelAdmin):
-    pass
+# Register your models here.
+admin.site.register(models.Videos)
+admin.site.register(models.Exercise)
+admin.site.register(models.Answers)

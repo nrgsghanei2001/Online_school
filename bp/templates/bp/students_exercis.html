@@ -1,0 +1,21 @@
+<html>
+
+<head>
+  <title>students_exercise</title>
+</head>
+
+<body>
+            <h2> students_exercises_pannel</h2>
+            <hr>
+            <h3><a href="{% url 'home' %}"><<< back page<a></h3>
+            <hr>
+            <h2><a href="{% url 'student_exercise_upload' %}">upload here<a></h2>
+            <br>
+            <hr>
+            <br>
+            {% for ex in exercise %}
+                <li><a href="/{{ex.file}}">{{ ex.name }}<a></li>
+            {% endfor %}
+</body>
+
+</html>
