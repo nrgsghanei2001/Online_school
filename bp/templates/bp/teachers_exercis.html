@@ -1,0 +1,20 @@
+
+<html>
+
+<head>
+  <title>teachers_exercise</title>
+</head>
+
+<body>
+            <h1>exercise pannel for teacher</h1>
+            <h2><a href="{% url 'home' %}"> <<< back page <a> </h2>
+            <hr>
+            <br>
+            <h2><a href="{% url 'teachers_exercise_upload' %}">uploading new exercises<a></h2>
+            <hr>
+            <br>
+            {% for ex in exercise %}
+            <li> <a href="{% url 'teachers_exercise_answers' ex.id %}" >{{ ex.name }} <a> </li>
+            {% endfor %}
+
+</html>

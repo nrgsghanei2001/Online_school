@@ -1,26 +1,17 @@
 from django.db import models
-from django.urls import reverse
-import uuid
+from datetime import datetime
 
-class studentNumber(models.Model):
-    studentcode=  models.IntegerField()
+class Exercise (models.Model):
+    name=models.CharField(max_length=200)
+    file = models.FileField( upload_to="exercise")
+    deadline=models.DateTimeField( auto_now=False, auto_now_add=False ,null=True,blank=True)
 
-class exercises(models.Model):
-    caption = models.CharField(max_length=100,null=True)
-    deadline= models.DateField(null=True,blank=True)
+class Answers(models.Model):
+    exercise=models.ForeignKey("Exercise", on_delete=models.CASCADE, null=True)
+    number=models.IntegerField()
+    file = models.FileField( upload_to="exercise")
+    deadline= models.DateTimeField(default=datetime.now(), blank=True)
+    score=models.IntegerField(default=100)
 
-    def __str__(self):
-        return self.caption
-
-class Date(models.Model):
-    dateofSend=   models.DateField(null=True,blank=True)
-
-class score(models.Model):
-    scores=       models.IntegerField()
-
-class Videos(models.Model):
-    caption = models.CharField(max_length=100,null=True)
-    Vids=     models.FileField(upload_to='videos/upload/')
-
-    def __str__(self):
-        return self.caption
+    def __str__ (self):
+        return str(self.number)

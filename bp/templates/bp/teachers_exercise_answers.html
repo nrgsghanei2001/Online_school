@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Students_Answers</title>
+</head>
+
+<body>
+<h2>STUDENTS_ANSWERS_TO_EXERCISES</h2>
+<h2><a href="{% url 'home' %}"><<< back page <a></h2>
+        <table style="background:white" boarder="20">
+            <tr style="background:blue">
+                <td>student_number</td>
+                <td>date_of_send</td>
+                <td>answer</td>
+                <td>max=100</td>
+            </tr>
+         {% for answer in answers %}
+            <tr>
+                <td>{{ answer.number }}</td>
+                <td>{{ answer.deadline }}</td>
+                <td><a href="{{answer.file}}" > download </a></td>
+                <td>{{ answer.score }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+</body>
+</html>
