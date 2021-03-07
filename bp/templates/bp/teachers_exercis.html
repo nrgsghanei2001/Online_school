@@ -6,10 +6,14 @@
 
 <body>
             <h1>exercise pannel for teacher</h1>
-            <h2><a href="{% url 'home' %}"> <<< back page <a> </h2>
+            <h3><a href="{% url 'home' %}"> <<< back page <a> </h3>
             <hr>
             <br>
-            <h2><a href="{% url 'teachers_exercise_upload' %}">uploading new exercises<a></h2>
+            <h2><a href="{% url 'teachers_exercise_upload' %}">uploading new exercises</a></h2>
+            <hr>
+            <br>
+            <h2><a href="#">score The students</h2>
+            <br>
             <hr>
             <br>
             {% for ex in exercise %}

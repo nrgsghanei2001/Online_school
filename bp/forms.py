@@ -14,8 +14,6 @@ class Teachers_videos_upload (ModelForm):
         fields = '__all__'
 
 
-
-
 class Student_exercise_upload (ModelForm):
     class Meta:
         model = models.Answers
