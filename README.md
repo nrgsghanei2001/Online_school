@@ -1,1 +1,1 @@
-# BP_
+This project is an online school platform that provides various features for students and professors. Students can access courses, grades, homeworks, and other resources through the site. Professors can upload and manage their course materials and assignments on the site. The platform aims to facilitate online learning and communication between students and professors.
